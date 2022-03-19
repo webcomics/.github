@@ -4,5 +4,15 @@
     "config:base",
     ":label(dependencies)",
     "regexManagers:dockerfileVersions"
+  ],
+  "packageRules": [
+    {
+      "description": "Strip v prefix from github versions",
+      "matchDatasources": [
+        "github-tags",
+        "github-releases"
+      ],
+      "extractVersion": "^v?(?<version>.*)$"
+    }
   ]
 }
