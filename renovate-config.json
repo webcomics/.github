@@ -7,10 +7,15 @@
   ],
   "packageRules": [
     {
-      "description": "Strip v prefix from github versions",
+      "description": "Strip v prefix from some github versions",
       "matchDatasources": [
         "github-tags",
         "github-releases"
+      ],
+      "matchPackagePrefixes": [
+        "krallin/tini",
+        "python/cpy",
+        "upx/"
       ],
       "extractVersion": "^v?(?<version>.*)$"
     }
